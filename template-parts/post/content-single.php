@@ -1,12 +1,19 @@
-<article <?php post_class(array('entry')); ?> id="post-<?php the_ID(); ?>" role="article">
-    <h1 class="entry-title"><?php the_title(); ?></h1>
-    <?php the_tags(); ?>
-    <section class="entry-content">
-        <?php
-        // Content example for CSS adjustments - Uncomment it if you need
-        //get_template_part( 'template-parts/post/content', 'example' );
-        the_content();
+<a href="<?php echo site_url();?>">Retour à l'accueil</a>
+<h2><?php the_title();?></h2>
+<p><?php the_field('parole');?></p>
+<?php if( have_rows('extrait') ): ?>
+    <ul class="slides">
+    <?php while( have_rows('extrait') ): the_row(); 
+        $fichier = get_sub_field('fichier');
         ?>
-    </section>
-    <?php comments_template(); ?>
-</article>
+       <figure>
+            <audio
+                controls
+                src="<?php echo $fichier;?>">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+    <?php endwhile; ?>
+    </ul>
+<?php endif; ?>

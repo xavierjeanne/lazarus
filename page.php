@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="entry-section">
+<div class="container">
 
     <?php
     if (have_posts()): the_post();
@@ -10,5 +10,5 @@
     ?>
 
     <?php wp_link_pages(); ?>
-</section>
+</div>
 <?php get_footer(); ?>

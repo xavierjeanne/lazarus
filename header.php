@@ -16,7 +16,7 @@
     ?>
 </head>
 <body <?php echo body_class(); ?>>
+<div class="container text-center">
 <header id="header" role="banner">
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+<h1>Lazarus</h1>
 </header>
-<section id="content" role="main">
