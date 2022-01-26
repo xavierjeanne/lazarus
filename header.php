@@ -19,4 +19,5 @@
 <div class="container text-center">
 <header id="header" role="banner">
 <h1>Lazarus</h1>
+<a href="<?php echo site_url();?>/wp-admin">Gestion des titres</a>
 </header>
