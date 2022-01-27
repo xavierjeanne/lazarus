@@ -16,8 +16,10 @@
     ?>
 </head>
 <body <?php echo body_class(); ?>>
-<div class="container text-center">
+<div class="text-center">
 <header id="header" role="banner">
-<h1>Lazarus</h1>
-<a href="<?php echo site_url();?>/wp-admin">Gestion des titres</a>
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" href="<?php echo home_url();?>">Lazarus</a>
+  <span class="pull-right"><a href="<?php echo site_url();?>/wp-admin">Gestion des titres</a></span>
+</nav>
 </header>

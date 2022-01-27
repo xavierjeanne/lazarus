@@ -1,9 +1,19 @@
-<a href="<?php echo site_url();?>">Retour à l'accueil</a>
-<h2><?php the_title();?></h2>
-<p><?php the_field('parole');?></p>
-<hr>
+<div class="row">
+    <div class="col-12 mb-5">
+        <h1><?php the_title();?></h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row mb-5 parole">
+        <div class="col-12">
+            <?php the_field('parole');?>
+        </div>
+    </div>
+</div>
+
 <?php if( have_rows('extrait') ): ?>
-    <div class="slides row">
+<hr>
+    <div class="slides row mt-5">
     <?php while( have_rows('extrait') ): the_row(); 
         $fichier = get_sub_field('fichier');
         $type = get_sub_field('type_dextrait');

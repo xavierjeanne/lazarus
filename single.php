@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="entry-section">
+<section class="container-fluid">
 
     <?php
     if (have_posts()): the_post();
